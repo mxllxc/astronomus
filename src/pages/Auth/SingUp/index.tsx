@@ -1,11 +1,11 @@
 import * as S from "./styles";
 
-const Teste: React.FC = () => {
+const SingUp: React.FC = () => {
   return (
     <S.Container>
-      <h1>teste 2</h1>
+      <h1>SingUp</h1>
     </S.Container>
   );
 };
 
-export default Teste;
+export default SingUp;

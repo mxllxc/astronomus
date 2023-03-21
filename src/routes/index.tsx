@@ -1,15 +1,15 @@
 import { Routes as RoutesDOM, Route } from "react-router-dom";
+import Auth from "../pages/Auth";
 
 import Home from "../pages/Home";
-import Teste from "../pages/Teste";
 
 const Routes = () => {
   return (
     <RoutesDOM>
       {/* <Route path="/error" element={<ErrorPage />} />
       <Route path="*" element={<PageNotFound />} /> */}
-      <Route path="/" element={<Home />} />
-      <Route path="/teste" element={<Teste />} />
+      <Route path="/" element={<Auth />} />
+      <Route path="/home" element={<Home />} />
     </RoutesDOM>
   );
 };
