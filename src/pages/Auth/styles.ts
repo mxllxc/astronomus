@@ -6,6 +6,14 @@ export const Container = styled.div`
   display: flex;
   flex-direction: row;
 
+  .auth-div {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    height: 100%;
+  }
+
   .img-div {
     width: 60vw;
     height: 100vh;
