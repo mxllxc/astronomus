@@ -1,38 +1,18 @@
+import Form from "antd/es/form";
 import styled from "styled-components";
 import { Color } from "../../../shared/utils/styles";
 
-export const Container = styled.div`
+export const Container = styled(Form)`
   display: flex;
   flex-direction: column;
   gap: 40px;
-  h1 {
-    color: ${Color.WHITE};
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 30px;
-  }
-  h3 {
-    color: ${Color.WHITE};
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-  }
-  h4 {
-    color: ${Color.WHITE};
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 13px;
-  }
+  h1,
+  h3,
+  h4,
   h5 {
     color: ${Color.WHITE};
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 300;
-    font-size: 12px;
   }
+
   span {
     display: flex;
     flex-direction: row;
@@ -72,6 +52,11 @@ export const Container = styled.div`
   .buttons-form {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-top: -10px;
+    h5 {
+      margin-top: -2px;
+    }
   }
   button {
     cursor: pointer;

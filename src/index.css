@@ -13,6 +13,37 @@ body {
   box-sizing: border-box;
 }
 
+h1 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+}
+h2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+}
+h3 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+}
+h4 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+}
+h5 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
