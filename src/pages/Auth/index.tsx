@@ -1,6 +1,6 @@
 import * as S from "./styles";
 import AuthGif from "../../assets/images/galaxy.jpg";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import SingIn from "./SingIn";
 import SingUp from "./SingUp";
 
@@ -11,7 +11,7 @@ const Auth: React.FC = () => {
       case 0:
         return <SingIn setLogin={setLogin} />;
       case 1:
-        return <SingUp />;
+        return <SingUp setLogin={setLogin} />;
       default:
         return <SingIn setLogin={setLogin} />;
     }
