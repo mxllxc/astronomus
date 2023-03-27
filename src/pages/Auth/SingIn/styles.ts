@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Color } from "../../../shared/utils/styles";
 
 export const Container = styled(Form)`
+  width: 26vw;
   display: flex;
   flex-direction: column;
   gap: 40px;
