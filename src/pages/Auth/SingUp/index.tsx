@@ -61,7 +61,7 @@ const SingUp = (props: SingUpProps) => {
             name="username"
             style={{ height: 0, marginTop: -8 }}
           >
-            <input type="text" placeholder="Enter your User name" />
+            <input type="text" placeholder="Enter your username" />
           </Form.Item>
         </span>
       </div>
