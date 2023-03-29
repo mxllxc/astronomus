@@ -1,5 +1,6 @@
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import { Form } from "antd";
+import { useNavigate } from "react-router-dom";
 import { Email } from "../../../assets/icons";
 import { Color } from "../../../shared/utils/styles";
 import * as S from "./styles";
@@ -16,6 +17,7 @@ const SingUp = (props: SingUpProps) => {
   const onFinishFailed = (errorInfo: any) => {
     console.log("Failed:", errorInfo);
   };
+
   return (
     <S.Container
       name="basic"

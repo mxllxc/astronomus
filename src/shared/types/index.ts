@@ -1,24 +1,29 @@
-import { Contador as ContadorDictionary } from "../utils/dictionary";
+import { store } from "../..";
+import { User as UserDictionary } from "../utils/dictionary";
 
 //================================================
 // Envios para o back end
 
 //================================================
 // Retornos do back end
+export type User = {
+  [UserDictionary.ID]: string;
+  [UserDictionary.EMAIL]: string;
+  [UserDictionary.NAME]: string;
+  [UserDictionary.PASSWORD]: string;
+};
 
 //================================================
 // Helpers
-export type Contador = {
-  [ContadorDictionary.CONTADOR]: number;
-};
+export type AppDispatch = typeof store.dispatch;
 
 //================================================
 // State
 
 export type RootState = {
-  contadorState: ContadorState;
+  userState: UserState;
 };
 
-export type ContadorState = {
-  contador: Contador;
+export type UserState = {
+  user: User[];
 };

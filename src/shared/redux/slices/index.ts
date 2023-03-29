@@ -1,10 +1,10 @@
 import { Reducer, combineReducers } from "redux";
 import { RootState } from "../../types";
 
-import contadorReducer from "../../../shared/redux/slices/contador";
+import userReducer from "./user";
 
 const rootReducer: Reducer<RootState> = combineReducers<RootState>({
-  contadorState: contadorReducer,
+  userState: userReducer,
 });
 
 export default rootReducer;

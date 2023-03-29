@@ -6,6 +6,9 @@
 
 //================================================
 // Helpers
-export enum Contador {
-  CONTADOR = "contador",
+export enum User {
+  ID = "id",
+  NAME = "name",
+  EMAIL = "email",
+  PASSWORD = "password",
 }
