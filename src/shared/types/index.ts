@@ -4,6 +4,12 @@ import { User as UserDictionary } from "../utils/dictionary";
 //================================================
 // Envios para o back end
 
+export type CreateUser = {
+  [UserDictionary.EMAIL]: string;
+  [UserDictionary.NAME]: string;
+  [UserDictionary.PASSWORD]: string;
+};
+
 //================================================
 // Retornos do back end
 export type User = {

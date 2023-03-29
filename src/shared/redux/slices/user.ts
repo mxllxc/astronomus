@@ -1,7 +1,10 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { User as UserDictionary } from "../../utils/dictionary";
-import { getUsers as getUsersService } from "../../../service/apiAstronomus";
-import { User, UserState } from "../../types";
+import {
+  getUsers as getUsersService,
+  postUsers,
+} from "../../../service/apiAstronomus";
+import { CreateUser, User, UserState } from "../../types";
 
 const initialState: UserState = {
   user: [

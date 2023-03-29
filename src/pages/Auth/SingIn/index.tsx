@@ -31,7 +31,7 @@ const SingIn = (props: SingInProps) => {
         <span>
           <h3>You can</h3>
           <h3
-            onClick={() => {
+            onClick={async () => {
               props.setLogin(1);
             }}
             className="pink-font"

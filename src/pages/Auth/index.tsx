@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getUser } from "../../shared/redux/selectors";
 import { getUsers } from "../../shared/redux/slices/user";
 import { AppDispatch } from "../../shared/types";
+import { postUsers } from "../../service/apiAstronomus";
 
 const Auth: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();

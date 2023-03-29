@@ -1,7 +1,9 @@
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
-import { Form } from "antd";
-import { useNavigate } from "react-router-dom";
+import Context from "@ant-design/icons/lib/components/Context";
+import { Form, notification } from "antd";
+import { NotificationPlacement } from "antd/es/notification/interface";
 import { Email } from "../../../assets/icons";
+import { postUsers } from "../../../service/apiAstronomus";
 import { Color } from "../../../shared/utils/styles";
 import * as S from "./styles";
 
@@ -10,8 +12,30 @@ type SingUpProps = {
 };
 
 const SingUp = (props: SingUpProps) => {
-  const onFinish = (values: any) => {
-    console.log("Success:", values);
+  const [form] = Form.useForm();
+  const [api, contextHolder] = notification.useNotification();
+
+  const openNotification = (placement: NotificationPlacement, data: string) => {
+    api.error({
+      message: "Opss, aconteceu um erro",
+      description: <Context.Consumer>{() => `${data}`}</Context.Consumer>,
+      placement,
+    });
+  };
+
+  const onFinish = async (values: any) => {
+    const value = {
+      email: values.email,
+      name: values.username,
+      password: values.password,
+    };
+    const response = await postUsers(value);
+
+    if (response?.status !== 201) {
+      openNotification("topRight", response?.data.message);
+    }
+    form.resetFields();
+    // Navigate
   };
 
   const onFinishFailed = (errorInfo: any) => {
@@ -20,12 +44,14 @@ const SingUp = (props: SingUpProps) => {
 
   return (
     <S.Container
+      form={form}
       name="basic"
       initialValues={{ remember: true }}
       onFinish={onFinish}
       onFinishFailed={onFinishFailed}
       autoComplete="off"
     >
+      {contextHolder}
       <div>
         <h1>Sing Up</h1>
         <h3>If you already have an account register</h3>
